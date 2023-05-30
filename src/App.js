@@ -1,12 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+import { Card, Space } from 'antd';
+import React from 'react';
+import MyTable from './MyTable';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
+      </header>
+      <Space direction="vertical" size={20}>
+        <Card title="Test Table" extra={<a href="#">More</a>}  style={{ width: 800 }}>
+        <MyTable/>
+        </Card>
+      </Space>
+
+        {/* <MyTable/> */}
+        {/* <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
@@ -16,8 +27,7 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
-      </header>
+        </a> */}
     </div>
   );
 }
